@@ -1,45 +1,64 @@
-Simple Express.js Form App
-A lightweight web application built with Express.js that serves an HTML form, processes the user's answer, and provides instant feedback.
 
-This project is a great example for beginners learning how to handle GET and POST requests, process form data, and implement basic conditional logic in a Node.js environment.
+# Simple Express.js Form App
 
-✨ Features
-Interactive Form: Displays a simple question to the user.
+> A lightweight web application built with **Express.js** that serves an HTML form, processes the user's answer, and provides instant feedback.
 
-Form Submission: Uses the POST method to securely send the user's answer.
+This project is a great example for beginners learning how to handle `GET` and `POST` requests, process form data, and implement basic conditional logic in a Node.js environment.
 
-Answer Validation: Checks if the submitted answer is correct.
+## ✨ Features
 
-User Feedback: Shows a "congratulations" or "sorry" message based on the answer.
+-   **Interactive Form:** Displays a simple question to the user.
+    
+-   **Form Submission:** Uses the `POST` method to securely send the user's answer.
+    
+-   **Answer Validation:** Checks if the submitted answer is correct.
+    
+-   **User Feedback:** Shows a "congratulations" or "sorry" message based on the answer.
+    
+-   **Simple Routing:** Demonstrates basic routing for different HTTP methods.
+    
 
-Simple Routing: Demonstrates basic routing for different HTTP methods.
+## 🚀 How to Run
 
-🚀 How to Run
-Prerequisites
-You must have Node.js and npm installed on your system. You can verify this by running node -v and npm -v in your terminal.
+### Prerequisites
 
-Instructions
-Save the Code: Save the code below into a file named server.js.
+You must have **Node.js** and **npm** installed on your system. You can verify this by running `node -v` and `npm -v` in your terminal.
 
-Create package.json: In your terminal, in the same directory as server.js, run this command to create a package.json file:
+### Instructions
 
-npm init -y
+1.  **Save the Code:** Save the code below into a file named `server.js`.
+    
+2.  **Create `package.json`:** In your terminal, in the same directory as `server.js`, run this command to create a `package.json` file:
+    
+    ```
+    npm init -y
+    
+    ```
+    
+3.  **Install Express:** Install the required dependency:
+    
+    ```
+    npm install express
+    
+    ```
+    
+4.  **Start the Server:** Run the application with the following command:
+    
+    ```
+    node server.js
+    
+    ```
+    
+    You should see the message: `Server is running on http://localhost:3000`
+    
+5.  **Access the App:** Open your web browser and navigate to `http://localhost:3000`.
+    
 
-Install Express: Install the required dependency:
+## 💻 The Code
 
-npm install express
-
-Start the Server: Run the application with the following command:
-
-node server.js
-
-You should see the message: Server is running on http://localhost:3000
-
-Access the App: Open your web browser and navigate to http://localhost:3000.
-
-💻 The Code
 Here is the complete, commented source code for the server.
 
+```
 const express = require("express");
 const app = express();
 const port = 3000;
@@ -83,3 +102,5 @@ app.get("/answer", function (req, res) {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+```
